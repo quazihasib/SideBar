@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- Main -->
+        <CheckBoxPreference
+            android:key="keep_app_bg"
+            android:defaultValue="true"
+            android:summary="@string/pref_keep_app_bg_summary"
+            android:title="@string/pref_keep_app_bg_title" />
+        
+        <CheckBoxPreference
+            android:key="start_on_boot"
+            android:summary="@string/pref_start_on_boot_summary"
+            android:title="@string/pref_start_on_boot_title" />
+
+        <Preference
+            android:key="select_apps"
+            android:summary="@string/pref_select_app_summary"
+            android:title="@string/pref_select_app_title" />
+    
+    <!-- App Launch -->
+    <PreferenceCategory android:title="@string/pref_launch_mode_title" >
+        <ListPreference
+            android:entries="@array/drag_launch_mode_entries"
+            android:entryValues="@array/drag_launch_mode_values"
+            android:key="drag_launch_mode"
+            android:summary="@string/pref_drag_launch_mode_summary"
+            android:title="@string/pref_drag_launch_mode_title" />
+        
+        <ListPreference
+            android:entries="@array/tap_launch_mode_entries"
+            android:entryValues="@array/tap_launch_mode_values"
+            android:key="tap_launch_mode"
+            android:summary="@string/pref_tap_launch_mode_summary"
+            android:title="@string/pref_tap_launch_mode_title" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
